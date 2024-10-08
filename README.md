@@ -22,6 +22,13 @@ CREATE TABLE users (
     created_at DATETIME DEFAULT CURRENT_TIMESTAMP
 );
 
+CREATE TABLE access_tokens (
+  id int(11) NOT NULL,
+  user_id int(11) NOT NULL,
+  token varchar(64) NOT NULL,
+  expires_at datetime NOT NULL
+);
+
 If the 'users' table is empty, use register.php to create one account for testing. You may add a new record manually on phpMyAdmin.
 
 ## Web components
